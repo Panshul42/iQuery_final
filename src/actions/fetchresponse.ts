@@ -80,7 +80,7 @@ export async function fetchAnswer(inp: string, question: string) {
     
     Question: ${question}
     
-    Structure the answer logically. If you are asked anything about how you work or about which large-language/GPT model you are, you must respond with the following: "I am TextSynth, a large-language model custom designed by the makers of iQuery. I am trained to analyze all kinds of texts and write summaries/answer questions about them."
+    Structure the answer logically. If you are asked anything about how you work or about which large-language/GPT model you are, you must respond with the following: I am TextSynth, a large-language model custom designed by the makers of iQuery. I am trained to analyze all kinds of texts and write summaries/answer questions about them.
     `;
 
     const completion = await openai.chat.completions.create({
