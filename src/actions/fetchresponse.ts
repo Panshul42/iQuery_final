@@ -62,7 +62,7 @@ export async function fetchResponse(inp: string) {
 
     const completion = await openai.chat.completions.create({
         messages: [{ role: "system", content: `${msg}`}],
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o",
         max_tokens: 3024,
     });
 
@@ -70,7 +70,7 @@ export async function fetchResponse(inp: string) {
 }
 
 export async function fetchAnswer(inp: string, question: string) {
-    const msg = `You are an AI language model that answers questions to 15-year old students based on the provided information. Use the following body of text to answer the question in a concise manner.
+    const msg = `You are an AI language model that answers questions to 15-year old students based on the provided information. Use the following body of text to answer the question in a concise manner. Do not add any formatting like latex or HTMl, use pure text only.
 
     Body of text:
     
@@ -82,12 +82,12 @@ export async function fetchAnswer(inp: string, question: string) {
     
     Question: ${question}
     
-    Structure the answer logically. If you are asked anything about how you work or about which large-language/GPT model you are, you must respond with the following: I am TextSynth, a large-language model custom designed by the makers of iQuery. I am trained to analyze all kinds of texts and write summaries/answer questions about them.
+    Structure the answer logically. If you are asked anything about how you work or about which large-language/GPT model you are, you must respond with the following: I am TextSynth, a large-language model custom designed by the makers of iQuery. I am trained to analyze all kinds of texts and write summaries/answer questions about them. Do not add any formatting like latex or HTMl, use pure text only.
     `;
 
     const completion = await openai.chat.completions.create({
         messages: [{ role: "system", content: msg }],
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o",
         max_tokens: 2000,
     });
 
