@@ -18,6 +18,8 @@ if (!process.env.OPENAI_API_KEY) {
     throw new Error('The OPENAI_API_KEY environment variable is missing or empty');
 }
 
+/* eslint-enable react/no-unescaped-entities */
+
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function fetchResponse(inp: string) {
@@ -92,3 +94,4 @@ export async function fetchAnswer(inp: string, question: string) {
     return completion.choices[0].message.content;
 }
 
+/* eslint-enable react/no-unescaped-entities */
