@@ -1,3 +1,5 @@
+/* eslint-enable react/no-unescaped-entities */
+
 import Image from "next/image";
 import Link from 'next/link';
 import InputBox from '@/components/inputbox';
@@ -18,3 +20,5 @@ export default function Home() {
     </div>
   );
 }
+
+/* eslint-disable react/no-unescaped-entities */

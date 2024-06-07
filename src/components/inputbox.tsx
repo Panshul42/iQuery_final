@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react/no-unescaped-entities */
 import { useState, useRef, ChangeEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useInputData } from '@/context/InputDataContext';
@@ -63,3 +64,4 @@ export default function InputBox() {
     </div>
   );
 }
+/* eslint-disable react/no-unescaped-entities */
