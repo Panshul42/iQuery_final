@@ -11,8 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 15, 23, 42; /* This is a dark blue shade */
+    --background-end-rgb: 15, 23, 42;   /* This is a dark blue shade */
   }
 }
 
@@ -29,5 +29,101 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.button-width {
+  width: 90px;
+}
+
+.twitter-blue {
+  background-color: #3f6fc2;
+  transition: background-color 0.3s ease;
+}
+
+.twitter-blue:hover {
+  background-color: #6285c2; /* Bootstrap's primary blue */
+}
+
+.light-blue {
+  color: #ADD8E6;
+}
+
+.summary-card-small-contents h2 {
+  font-size: 2em;
+}
+
+.summary-card-small-contents h4 {
+  font-size: 1.5em;
+}
+
+.summary-card-small-contents ul {
+  list-style-type: disc;
+  margin-left: 1.5em;
+}
+
+.summary-card-small-contents li {
+  margin-bottom: 0.5em;
+}
+
+.summary-card-small {
+  max-width: 100%;
+  max-height: 260px;
+  overflow: auto;
+  border: 1px solid hsl(0, 0%, 49%);
+  box-shadow: 10px 10px 10px hsl(0, 0%, 0%, 0.1);
+}
+
+.summary-card-small-contents {
+  font-family: Arial;
+  margin-bottom: 15px;
+}
+
+.bg-b {
+  background-color: #0d6efd;
+}
+
+.tall {
+  height: 200px;
+}
+
+.editmaxwidth {
+  max-width: 1500px;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.center-content {
+  width: 100%;
+  margin: 0 auto;
+} 
+
+.editpt{
+  padding-top: 1rem;
+}
+
+.editpb{
+  padding-bottom: 1.25rem;
+}
+
+.editpt1{
+  padding-top: 0.25rem;
+}
+
+.editpt2{
+  padding-top: 0.5rem;
+}
+
+.editpt3{
+  padding-top: 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .editfs {
+    font-size: 1rem;
   }
 }
